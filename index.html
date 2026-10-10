@@ -21,56 +21,56 @@ body{
     line-height:1.6;
 }
 
+/* HERO */
+
 .hero{
+    position:relative;
     background:linear-gradient(135deg,#071226,#0F172A,#1E293B);
     color:white;
-    min-height:85vh;
+    min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     padding:40px;
 }
 
 .top-bar{
     position:absolute;
-    top:20px;
-    left:30px;
+    top:25px;
+    left:35px;
 }
 
 .logo-small{
-    height:55px;
+    height:50px;
     width:auto;
+    display:block;
 }
 
 .hero-content{
     max-width:900px;
 }
 
-.logo{
-    width:500px;
-    max-width:90%;
-    margin-bottom:30px;
-}
-
 .hero h1{
-    font-size:3.5rem;
-    margin-bottom:20px;
+    font-size:4rem;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:25px;
 }
 
 .hero p{
-    font-size:1.3rem;
+    font-size:1.35rem;
     color:#A7C7E7;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 .cta-btn{
     display:inline-block;
+    padding:15px 35px;
     background:#A7C7E7;
     color:#0F172A;
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:50px;
+    border-radius:40px;
     font-weight:600;
     transition:0.3s;
 }
@@ -78,6 +78,8 @@ body{
 .cta-btn:hover{
     background:white;
 }
+
+/* GENERAL */
 
 section{
     padding:80px 10%;
@@ -94,6 +96,8 @@ section{
     margin:auto;
     text-align:center;
 }
+
+/* SERVICES */
 
 .services{
     display:grid;
@@ -117,6 +121,8 @@ section{
     margin-bottom:15px;
 }
 
+/* CHALLENGES */
+
 .problems{
     max-width:700px;
     margin:auto;
@@ -127,6 +133,8 @@ section{
     font-size:1.1rem;
 }
 
+/* CONTACT */
+
 .contact{
     background:#1E293B;
     color:white;
@@ -135,7 +143,14 @@ section{
 
 .contact a{
     color:#A7C7E7;
+    text-decoration:none;
 }
+
+.contact a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
 
 footer{
     background:#0F172A;
@@ -144,20 +159,26 @@ footer{
     padding:20px;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
-.hero h1{
-    font-size:2.2rem;
-}
+    .hero h1{
+        font-size:2.3rem;
+    }
 
-.hero p{
-    font-size:1.1rem;
-}
+    .hero p{
+        font-size:1.1rem;
+    }
 
-.logo{
-    width:300px;
-}
+    .logo-small{
+        height:40px;
+    }
 
+    .top-bar{
+        left:20px;
+        top:20px;
+    }
 }
 
 </style>
@@ -167,15 +188,16 @@ footer{
 
 <section class="hero">
 
+    <div class="top-bar">
+        Aivis_Logo_Transparent_2.png
+    </div>
+
     <div class="hero-content">
 
-        <div class="top-bar">
-        <img src="Aivis_Logo_Transparent_2.png"
-             alt="Aivis Solutions Oy Logo"
-             class="logo-small">
-         
-
-        <h1>Turn Your Business Data Into Profitable Decisions</h1>
+        <h1>
+            Turn Your Business Data Into
+            Profitable Decisions
+        </h1>
 
         <p>
             Data Analytics • Business Intelligence • AI Solutions • RPA Automation
@@ -253,46 +275,18 @@ footer{
     <h2 class="section-title">Business Challenges We Solve</h2>
 
     <ul class="problems">
+
         <li>✅ Data scattered across Excel files and systems</li>
         <li>✅ Limited visibility into key performance indicators</li>
         <li>✅ Time-consuming manual reporting processes</li>
         <li>✅ Repetitive operational tasks suitable for automation</li>
         <li>✅ Lack of forecasting and data-driven insights</li>
+
     </ul>
 
 </section>
 
-<section>
-
-    <h2 class="section-title">Analytics Demonstrations</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>Sales Dashboard</h3>
-            <p>Revenue, profit and customer performance analytics.</p>
-        </div>
-
-        <div class="card">
-            <h3>Financial Dashboard</h3>
-            <p>Track financial KPIs and business performance.</p>
-        </div>
-
-        <div class="card">
-            <h3>Inventory Analytics</h3>
-            <p>Monitor trends, stock levels and inventory efficiency.</p>
-        </div>
-
-        <div class="card">
-            <h3>Forecasting Models</h3>
-            <p>Predict future trends using AI and analytics.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="contact" id="contact">
+<section id="contact" class="contact">
 
     <h2>Contact Us</h2>
 
@@ -300,10 +294,13 @@ footer{
 
     <p>📍 Vaasa, Finland</p>
 
-    <p>📧 aivis.solutions.info@gmail.com  </p>
+    <p>📧 aivis.solutions.info@gmail.com</p>
 
     <p>
-        LinkedIn: https://www.linkedin.com/company/aivis-solutions/
+        LinkedIn:
+        <a href="https://www.linkedin.com/company/aivis-solutions/" target="_blank">
+            Aivis Solutions Oy
+        </a>
     </p>
 
 </section>
