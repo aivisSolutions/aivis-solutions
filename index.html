@@ -21,111 +21,71 @@ body{
     line-height:1.6;
 }
 
-/* NAVBAR */
-
-.navbar{
-    background:#ffffff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    height:42px;
-    width:auto;
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#475569;
-    font-weight:500;
-}
-
-.nav-links a:hover{
-    color:#38BDF8;
-}
-
-/* HERO */
-
 .hero{
     background:linear-gradient(135deg,#071226,#0F172A,#1E293B);
     color:white;
-    min-height:70vh;
+    min-height:85vh;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:80px 8%;
+    padding:40px;
+}
+
+.top-bar{
+    position:absolute;
+    top:20px;
+    left:30px;
+}
+
+.logo-small{
+    height:55px;
+    width:auto;
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
+}
+
+.logo{
+    width:500px;
+    max-width:90%;
+    margin-bottom:30px;
 }
 
 .hero h1{
-    font-size:3.2rem;
-    line-height:1.1;
-    margin-bottom:24px;
+    font-size:3.5rem;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.2rem;
-    color:#CBD5E1;
-    max-width:700px;
-    margin:0 auto 35px auto;
+    font-size:1.3rem;
+    color:#A7C7E7;
+    margin-bottom:30px;
 }
 
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn-primary{
-    background:#43C6DB;
-    color:#08111F;
+.cta-btn{
+    display:inline-block;
+    background:#A7C7E7;
+    color:#0F172A;
     text-decoration:none;
-    padding:14px 30px;
-    border-radius:40px;
+    padding:15px 35px;
+    border-radius:50px;
     font-weight:600;
+    transition:0.3s;
 }
 
-.btn-primary:hover{
-    background:#7DD3FC;
+.cta-btn:hover{
+    background:white;
 }
-
-.btn-secondary{
-    border:1px solid #94A3B8;
-    color:white;
-    text-decoration:none;
-    padding:14px 30px;
-    border-radius:40px;
-}
-
-.btn-secondary:hover{
-    background:rgba(255,255,255,0.1);
-}
-
-/* CONTENT */
 
 section{
-    padding:80px 8%;
+    padding:80px 10%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:40px;
     font-size:2.2rem;
 }
 
@@ -143,14 +103,14 @@ section{
 
 .card{
     background:white;
-    border-radius:16px;
+    border-radius:15px;
     padding:30px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-5px);
 }
 
 .card h3{
@@ -164,9 +124,8 @@ section{
 
 .problems li{
     margin-bottom:15px;
+    font-size:1.1rem;
 }
-
-/* CONTACT */
 
 .contact{
     background:#1E293B;
@@ -175,15 +134,8 @@ section{
 }
 
 .contact a{
-    color:#43C6DB;
-    text-decoration:none;
+    color:#A7C7E7;
 }
-
-.contact a:hover{
-    text-decoration:underline;
-}
-
-/* FOOTER */
 
 footer{
     background:#0F172A;
@@ -192,25 +144,20 @@ footer{
     padding:20px;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
 
-    .hero h1{
-        font-size:2.2rem;
-    }
+.hero h1{
+    font-size:2.2rem;
+}
 
-    .hero p{
-        font-size:1rem;
-    }
+.hero p{
+    font-size:1.1rem;
+}
 
-    .logo{
-        height:36px;
-    }
+.logo{
+    width:300px;
+}
 
-    .nav-links{
-        display:none;
-    }
 }
 
 </style>
@@ -218,87 +165,152 @@ footer{
 
 <body>
 
-<header class="navbar">
-
-    Aivis_Logo_Transparent_2.png
-
-    <nav class="nav-links">
-        #aboutAbout</a>
-        #servicesServices</a>
-        #contactContact</a>
-    </nav>
-
-</header>
-
 <section class="hero">
 
     <div class="hero-content">
 
-        <h1>
-            Transforming Data Into
-            Better Business Decisions
-        </h1>
+        <div class="top-bar">
+        <img src="Aivis_Logo_Transparent_2.png"
+             alt="Aivis Solutions Oy Logo"
+             class="logo-small">
+         
+
+        <h1>Turn Your Business Data Into Profitable Decisions</h1>
 
         <p>
-            We help organizations leverage analytics,
-            artificial intelligence and automation
-            to improve performance, increase efficiency
-            and accelerate growth.
+            Data Analytics • Business Intelligence • AI Solutions • RPA Automation
         </p>
 
-        <div class="hero-buttons">
-
-            #contact
-                Free Consultation
-            </a>
-
-            #services
-                View Services
-            </a>
-
-        </div>
+        #contact
+            Book a Free Consultation
+        </a>
 
     </div>
 
 </section>
 
-<section id="about">
+<section>
 
-    <h2 class="section-title">
-        About Aivis Solutions Oy
-    </h2>
+    <h2 class="section-title">About Aivis Solutions Oy</h2>
 
     <div class="about">
 
         <p>
-            Aivis Solutions Oy helps organizations unlock the value of their data
-            through Data Analytics, Business Intelligence, Artificial Intelligence,
-            and Process Automation solutions. Our mission is to transform complex
-            business data into actionable insights that support smarter decisions.
+            Aivis Solutions Oy helps organizations leverage data,
+            analytics, artificial intelligence, and automation
+            to improve decision-making, increase operational efficiency,
+            and drive business growth.
         </p>
 
     </div>
 
 </section>
 
-<section id="services">
+<section>
 
-    <h2 class="section-title">
-        Services
-    </h2>
+    <h2 class="section-title">Services</h2>
 
     <div class="services">
 
         <div class="card">
             <h3>📊 Data Analytics</h3>
-            <p>Transform raw business data into actionable insights and meaningful KPIs.</p>
+            <p>
+                Transform raw business data into actionable insights
+                that support strategic decisions.
+            </p>
         </div>
 
         <div class="card">
             <h3>📈 Business Intelligence</h3>
-            <p>Create interactive Power BI dashboards and automate reporting processes.</p>
+            <p>
+                Interactive Power BI dashboards that provide
+                real-time visibility into key business metrics.
+            </p>
         </div>
 
         <div class="card">
             <h3>🤖 AI Solutions</h3>
-            <p>Leverage predictive analytics
+            <p>
+                Predictive analytics and AI-powered solutions
+                to identify trends and opportunities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ RPA Automation</h3>
+            <p>
+                Automate repetitive tasks and streamline
+                business processes.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="section-title">Business Challenges We Solve</h2>
+
+    <ul class="problems">
+        <li>✅ Data scattered across Excel files and systems</li>
+        <li>✅ Limited visibility into key performance indicators</li>
+        <li>✅ Time-consuming manual reporting processes</li>
+        <li>✅ Repetitive operational tasks suitable for automation</li>
+        <li>✅ Lack of forecasting and data-driven insights</li>
+    </ul>
+
+</section>
+
+<section>
+
+    <h2 class="section-title">Analytics Demonstrations</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Sales Dashboard</h3>
+            <p>Revenue, profit and customer performance analytics.</p>
+        </div>
+
+        <div class="card">
+            <h3>Financial Dashboard</h3>
+            <p>Track financial KPIs and business performance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Inventory Analytics</h3>
+            <p>Monitor trends, stock levels and inventory efficiency.</p>
+        </div>
+
+        <div class="card">
+            <h3>Forecasting Models</h3>
+            <p>Predict future trends using AI and analytics.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <br>
+
+    <p>📍 Vaasa, Finland</p>
+
+    <p>📧 aivis.solutions.info@gmail.com  </p>
+
+    <p>
+        LinkedIn: https://www.linkedin.com/company/aivis-solutions/
+    </p>
+
+</section>
+
+<footer>
+    © 2026 Aivis Solutions Oy | Transforming Data into Decisions
+</footer>
+
+</body>
+</html>
