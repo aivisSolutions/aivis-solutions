@@ -1,246 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aivis Solutions Oy | Data Analytics, AI & Automation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aivis Solutions Oy</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: #F8FAFC;
-            color: #0F172A;
-            line-height: 1.6;
-        }
+body{
+    margin:0;
+    font-family:Segoe UI,sans-serif;
+    background:#F8FAFC;
+    color:#0F172A;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #071226, #0F172A, #1E293B);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+.header{
+    background:#0F172A;
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
 
-        .hero-content {
-            max-width: 1000px;
-        }
+.header h1{
+    font-size:48px;
+}
 
-        .logo {
-            width: 500px;
-            max-width: 90%;
-            display: block;
-            margin: 0 auto 30px;
-        }
+.header p{
+    font-size:22px;
+    color:#A7C7E7;
+}
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:60px 20px;
+}
 
-        .hero p {
-            font-size: 1.3rem;
-            color: #A7C7E7;
-            margin-bottom: 35px;
-        }
+.card{
+    width:280px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,.1);
+}
 
-        .cta-btn {
-            display: inline-block;
-            background: #A7C7E7;
-            color: #0F172A;
-            text-decoration: none;
-            padding: 15px 35px;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
+.card h3{
+    color:#0F172A;
+}
 
-        .cta-btn:hover {
-            background: white;
-        }
+.about{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    text-align:center;
+}
 
-        section {
-            padding: 80px 10%;
-        }
+.contact{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    text-align:center;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.2rem;
-        }
+.contact a{
+    color:#0F172A;
+    text-decoration:none;
+}
 
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
+.footer{
+    background:#1E293B;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-            color: #0F172A;
-        }
-
-        .problems {
-            max-width: 700px;
-            margin: auto;
-        }
-
-        .problems li {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-
-        .contact {
-            background: #1E293B;
-            color: white;
-            text-align: center;
-        }
-
-        .contact a {
-            color: #A7C7E7;
-            text-decoration: none;
-        }
-
-        footer {
-            background: #0F172A;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .logo {
-                width: 300px;
-            }
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-    <section class="hero">
-        <div class="hero-content">
+<div class="header">
+    <h1>Aivis Solutions Oy</h1>
+    <p>Transforming Data into Decisions</p>
+</div>
 
-            Aivis_Logo_Transparent.png
+<div class="about">
+    <h2>About Us</h2>
+    <p>
+        We help businesses unlock the value of data through
+        Data Analytics, Business Intelligence, Artificial Intelligence,
+        and RPA Automation.
+    </p>
+</div>
 
-            <h1>Turn Your Business Data Into Profitable Decisions</h1>
+<div class="services">
 
-            <p>
-                Data Analytics • Business Intelligence • AI Solutions • RPA Automation
-            </p>
+    <div class="card">
+        <h3>📊 Data Analytics</h3>
+        <p>Transform business data into actionable insights.</p>
+    </div>
 
-            #contact
-                Book a Free Consultation
-            </a>
+    <div class="card">
+        <h3>📈 Business Intelligence</h3>
+        <p>Power BI dashboards and reporting solutions.</p>
+    </div>
 
-        </div>
-    </section>
+    <div class="card">
+        <h3>🤖 AI Solutions</h3>
+        <p>Machine learning and predictive analytics.</p>
+    </div>
 
-    <section>
-        <h2 class="section-title">About Aivis Solutions Oy</h2>
+    <div class="card">
+        <h3>⚡ RPA Automation</h3>
+        <p>Automate repetitive business processes.</p>
+    </div>
 
-        <div class="about">
-            <p>
-                Aivis Solutions Oy helps organizations leverage data,
-                analytics, artificial intelligence, and automation
-                to improve decision-making, increase operational efficiency,
-                and drive business growth.
-            </p>
-        </div>
-    </section>
+</div>
 
-    <section>
-        <h2 class="section-title">Services</h2>
+<div class="about">
+    <h2>Sample Analytics Solutions</h2>
+    <p>
+        Examples of analytics and automation solutions that Aivis Solutions Oy can deliver.
+    </p>
+</div>
 
-        <div class="services">
+<div class="services">
 
-            <div class="card">
-                <h3>📊 Data Analytics</h3>
-                <p>
-                    Transform raw business data into actionable insights
-                    that support strategic decisions.
-                </p>
-            </div>
+    <div class="card">
+        <h3>📈 Power BI Sales Analytics</h3>
+        <p>
+            Track revenue trends, customer performance,
+            sales KPIs and business growth through interactive dashboards.
+        </p>
+    </div>
 
-            <div class="card">
-                <h3>📈 Business Intelligence</h3>
-                <p>
-                    Interactive Power BI dashboards that provide
-                    real-time visibility into key business metrics.
-                </p>
-            </div>
+    <div class="card">
+        <h3>💰 Financial Performance Dashboard</h3>
+        <p>
+            Monitor profitability, cash flow, cost analysis and executive KPIs
+            with automated reporting.
+        </p>
+    </div>
 
-            <div class="card">
-                <h3>🤖 AI Solutions</h3>
-                <p>
-                    Predictive analytics and AI-powered solutions
-                    to identify trends and opportunities.
-                </p>
-            </div>
+    <div class="card">
+        <h3>🏭 Operations & Inventory Analytics</h3>
+        <p>
+            Optimize inventory levels, track operational performance
+            and identify efficiency improvements.
+        </p>
+    </div>
 
-            <div class="card">
-                <h3>⚡ RPA Automation</h3>
-                <p>
-                    Automate repetitive tasks and streamline
-                    business processes.
-                </p>
-            </div>
+    <div class="card">
+        <h3>🤖 AI Forecasting & Predictive Insights</h3>
+        <p>
+            Use machine learning models to forecast demand,
+            identify trends and support better decision making.
+        </p>
+    </div>
 
-        </div>
-    </section>
+</div>
 
-    <section>
-        <h2 class="section-title">Business Challenges We Solve</h2>
+<div class="contact">
+    <h2>Contact</h2>
 
-        <ul class="problems">
-            <li>✅ Data scattered across Excel files and systems</li>
-            <li>✅ Limited visibility into key performance indicators</li>
-            <li>✅ Time-consuming manual reporting processes</li>
-            <li>✅ Repetitive operational tasks suitable for automation</li>
-            <li>✅ Lack of forecasting and data-driven insights</li>
-        </ul>
-    </section>
+    <p>📍 Vaasa, Finland</p>
 
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
+    <p>📧 aivis.solutions.info@gmail.com</p>
 
-        <p>📍 Vaasa, Finland</p>
-        <p>📧 info@aivis.fi</p>
-        <p>LinkedIn: Aivis Solutions Oy</p>
-    </section>
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/company/aivis-solutions/" target="_blank">
+            Aivis Solutions Oy
+        </a>
+    </p>
+</div>
 
-    <footer>
-        © 2026 Aivis Solutions Oy | Transforming Data into Decisions
-    </footer>
+<div class="footer">
+    © 2026 Aivis Solutions Oy
+</div>
 
 </body>
 </html>
