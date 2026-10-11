@@ -50,6 +50,34 @@ body{
     color:#0F172A;
 }
 
+.card-link{
+    display:block;
+    color:inherit;
+    text-decoration:none;
+}
+
+.card-link .card{
+    transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.card-link:hover .card,
+.card-link:focus-visible .card{
+    transform:translateY(-3px);
+    box-shadow:0 6px 20px rgba(0,0,0,.16);
+}
+
+.card-link:focus-visible{
+    outline:3px solid #2563EB;
+    outline-offset:4px;
+    border-radius:15px;
+}
+
+.card-action{
+    margin-bottom:0;
+    color:#1D4ED8;
+    font-weight:600;
+}
+
 .about{
     max-width:900px;
     margin:auto;
@@ -128,13 +156,16 @@ body{
 
 <div class="services">
 
-    <div class="card">
-        <h3>📈 Power BI Sales Analytics</h3>
-        <p>
-            Track revenue trends, customer performance,
-            sales KPIs and business growth through interactive dashboards.
-        </p>
-    </div>
+    <a class="card-link" href="Executive%20Overview.png" target="_blank" rel="noopener">
+        <div class="card">
+            <h3>📈 Power BI Sales Analytics</h3>
+            <p>
+                Track revenue trends, customer performance,
+                sales KPIs and business growth through interactive dashboards.
+            </p>
+            <p class="card-action">View dashboard screenshot ↗</p>
+        </div>
+    </a>
 
     <div class="card">
         <h3>💰 Financial Performance Dashboard</h3>
