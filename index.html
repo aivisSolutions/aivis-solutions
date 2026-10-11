@@ -31,15 +31,18 @@ body{
 }
 
 .services{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+    grid-auto-rows:1fr;
+    align-items:stretch;
     gap:20px;
     padding:60px 20px;
 }
 
 .card{
-    width:280px;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
     background:white;
     padding:25px;
     border-radius:15px;
@@ -51,12 +54,13 @@ body{
 }
 
 .card-link{
-    display:block;
+    display:flex;
     color:inherit;
     text-decoration:none;
 }
 
 .card-link .card{
+    flex:1;
     transition:transform .2s ease,box-shadow .2s ease;
 }
 
@@ -156,7 +160,7 @@ body{
 
 <div class="services">
 
-    <a class="card-link" href="Executive Overview.png" target="_blank" rel="noopener">
+    <a class="card-link" href="Executive%20Overview.png" target="_blank" rel="noopener">
         <div class="card">
             <h3>📈 Power BI Sales Analytics</h3>
             <p>
@@ -184,11 +188,10 @@ body{
     </div>
 
     <div class="card">
-        <h3>🤖 Business Process Automation</h3>
+        <h3>🤖 AI Forecasting & Predictive Insights</h3>
         <p>
-        Eliminate manual work by automating invoice processing,
-        data transfers, approvals, notifications, and recurring
-        administrative tasks using modern automation solutions.
+            Use machine learning models to forecast demand,
+            identify trends and support better decision making.
         </p>
     </div>
 
