@@ -7,27 +7,157 @@
 
 <style>
 
+:root{
+    --primary:#0F4C81;
+    --secondary:#5FA8D3;
+    --accent:#2EC4B6;
+    --light:#F8FAFC;
+    --dark:#1E293B;
+}
+
 body{
     margin:0;
     font-family:Segoe UI,sans-serif;
-    background:#F8FAFC;
-    color:#0F172A;
+    background:var(--light);
+    color:var(--dark);
 }
 
 .header{
-    background:#0F172A;
-    color:white;
-    padding:80px 20px;
+    background:linear-gradient(135deg,var(--light) 0%,#EAF4F8 60%,#DCEEF2 100%);
+    color:var(--dark);
+    padding:80px 20px 90px;
     text-align:center;
 }
 
 .header h1{
-    font-size:48px;
+    max-width:900px;
+    margin:0 auto;
+    font-size:clamp(36px,6vw,56px);
+}
+
+.header-logo{
+    display:block;
+    width:min(320px,90%);
+    height:auto;
+    box-sizing:border-box;
+    margin:0 auto 36px;
 }
 
 .header p{
+    max-width:760px;
+    margin:20px auto 30px;
     font-size:22px;
-    color:#A7C7E7;
+    color:#475569;
+    line-height:1.5;
+}
+
+.header-cta{
+    display:inline-block;
+    padding:14px 24px;
+    border:0;
+    border-radius:8px;
+    background:var(--accent);
+    color:var(--primary);
+    font:inherit;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.header-cta:hover,
+.header-cta:focus-visible{
+    background:#26B0A4;
+}
+
+.header-cta:focus-visible{
+    outline:3px solid var(--primary);
+    outline-offset:4px;
+}
+
+.consultation-form{
+    max-width:460px;
+    margin:28px auto 0;
+    padding:24px;
+    border:1px solid #DCEEF2;
+    border-radius:18px;
+    background:rgba(255,255,255,.88);
+    box-shadow:0 16px 36px rgba(15,76,129,.1);
+    text-align:left;
+}
+
+.consultation-form h2{
+    margin:0 0 8px;
+    color:var(--primary);
+    font-size:24px;
+}
+
+.consultation-form p{
+    margin:0 0 18px;
+    font-size:15px;
+}
+
+.consultation-form label{
+    display:block;
+    margin:14px 0 6px;
+    color:var(--dark);
+    font-size:15px;
+    font-weight:600;
+}
+
+.consultation-form input{
+    box-sizing:border-box;
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #CBD5E1;
+    border-radius:8px;
+    background:white;
+    color:var(--dark);
+    font:inherit;
+}
+
+.consultation-form input:focus-visible{
+    outline:3px solid rgba(46,196,182,.45);
+    border-color:var(--primary);
+}
+
+.form-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.form-submit{
+    padding:12px 18px;
+    border:0;
+    border-radius:8px;
+    background:var(--accent);
+    color:var(--primary);
+    font:inherit;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.form-submit:hover,
+.form-submit:focus-visible{
+    background:#26B0A4;
+}
+
+.form-close{
+    padding:10px;
+    border:0;
+    background:transparent;
+    color:var(--primary);
+    font:inherit;
+    cursor:pointer;
+}
+
+.form-close:hover,
+.form-close:focus-visible{
+    text-decoration:underline;
+}
+
+[hidden]{
+    display:none !important;
 }
 
 .services{
@@ -50,7 +180,7 @@ body{
 }
 
 .card h3{
-    color:#0F172A;
+    color:var(--dark);
 }
 
 .card-link{
@@ -71,14 +201,14 @@ body{
 }
 
 .card-link:focus-visible{
-    outline:3px solid #2563EB;
+    outline:3px solid var(--secondary);
     outline-offset:4px;
     border-radius:15px;
 }
 
 .card-action{
     margin-bottom:0;
-    color:#1D4ED8;
+    color:var(--secondary);
     font-weight:600;
 }
 
@@ -90,19 +220,99 @@ body{
 }
 
 .contact{
-    max-width:900px;
-    margin:auto;
-    padding:40px;
+    max-width:760px;
+    margin:24px auto;
+    padding:32px;
+    border:1px solid #E2E8F0;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 16px 40px rgba(15,76,129,.08);
     text-align:center;
 }
 
+.contact h2,
+.founder h2{
+    color:var(--primary);
+}
+
+.contact p{
+    display:inline-block;
+    margin:8px;
+    padding:12px 16px;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    background:var(--light);
+}
+
 .contact a{
-    color:#0F172A;
+    color:var(--secondary);
+    font-weight:600;
     text-decoration:none;
 }
 
+.contact a:hover,
+.contact a:focus-visible{
+    color:var(--primary);
+    text-decoration:underline;
+}
+
+.founder{
+    max-width:900px;
+    margin:36px auto 56px;
+    padding:40px;
+    border:1px solid #DCEEF2;
+    border-radius:24px;
+    background:linear-gradient(145deg,#FFFFFF 0%,#F0F8FA 100%);
+    box-shadow:0 18px 44px rgba(15,76,129,.08);
+}
+
+.founder h3{
+    margin-top:28px;
+    color:var(--primary);
+}
+
+.tools{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:0;
+    list-style:none;
+}
+
+.tools li{
+    padding:8px 14px;
+    border-radius:999px;
+    border:1px solid #B9E8E3;
+    background:#E5F7F5;
+    color:var(--primary);
+    font-weight:600;
+    transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease;
+}
+
+.tools li:hover{
+    transform:translateY(-3px);
+    background:#D3F1ED;
+    box-shadow:0 5px 14px rgba(46,196,182,.18);
+}
+
+@media(max-width:600px){
+    .contact,
+    .founder{
+        box-sizing:border-box;
+        width:calc(100% - 32px);
+        padding:28px 20px;
+    }
+
+    .contact p{
+        display:block;
+        margin:10px 0;
+        overflow-wrap:anywhere;
+    }
+}
+
 .footer{
-    background:#1E293B;
+    background:var(--dark);
     color:white;
     text-align:center;
     padding:20px;
@@ -114,8 +324,22 @@ body{
 <body>
 
 <div class="header">
-    <h1>Aivis Solutions Oy</h1>
-    <p>Transforming Data into Decisions</p>
+    <img class="header-logo" src="Aivis_Logo_Transparent_2_official.png" alt="Aivis Solutions Oy logo">
+    <h1>Data Analytics &amp; Process Automation for SMEs</h1>
+    <p>Transform reporting, automate repetitive work, and gain business insights with Power BI and intelligent automation.</p>
+    <button class="header-cta" type="button" aria-expanded="false" aria-controls="consultation-form">Book a Free 1-hour Consultation</button>
+    <form class="consultation-form" id="consultation-form" hidden>
+        <h2>Request a Consultation</h2>
+        <p>Share your details and your email app will open with a request addressed to Aivis Solutions.</p>
+        <label for="consultation-name">Your name</label>
+        <input id="consultation-name" name="name" type="text" autocomplete="name" required>
+        <label for="consultation-email">Your email</label>
+        <input id="consultation-email" name="email" type="email" autocomplete="email" required>
+        <div class="form-actions">
+            <button class="form-submit" type="submit">Continue to email</button>
+            <button class="form-close" type="button">Cancel</button>
+        </div>
+    </form>
 </div>
 
 <div class="about">
@@ -140,8 +364,8 @@ body{
     </div>
 
     <div class="card">
-        <h3>🤖 AI Solutions</h3>
-        <p>Machine learning and predictive analytics.</p>
+        <h3>🤖 Smart Business Automation</h3>
+        <p>Automate reporting, document handling, invoice processing and business workflows using modern automation tools.</p>
     </div>
 
     <div class="card">
@@ -188,11 +412,8 @@ body{
     </div>
 
     <div class="card">
-        <h3>🤖 AI Forecasting & Predictive Insights</h3>
-        <p>
-            Use machine learning models to forecast demand,
-            identify trends and support better decision making.
-        </p>
+        <h3>🤖 Smart Business Automation</h3>
+        <p>Automate reporting, document handling, invoice processing and business workflows using modern automation tools.</p>
     </div>
 
 </div>
@@ -202,7 +423,7 @@ body{
 
     <p>📍 Vaasa, Finland</p>
 
-    <p>📧 aivis.solutions.info@gmail.com</p>
+    <p>📧 <a href="mailto:aivis.solutions.info@gmail.com">aivis.solutions.info@gmail.com</a></p>
 
     <p>
         LinkedIn:
@@ -212,9 +433,61 @@ body{
     </p>
 </div>
 
+<div class="about founder">
+    <h2>About the Founder</h2>
+    <p>
+        Founded by a data analytics professional with experience in business intelligence,
+        automation and reporting solutions.
+    </p>
+    <h3>Tools &amp; Technologies</h3>
+    <ul class="tools">
+        <li>Power BI</li>
+        <li>Databricks</li>
+        <li>Power Automate</li>
+        <li>Excel</li>
+        <li>SQL</li>
+        <li>Python</li>
+        <li>RPA</li>
+        <li>Agentic Automation</li>
+    </ul>
+</div>
+
 <div class="footer">
     © 2026 Aivis Solutions Oy
 </div>
+
+<script>
+const consultationButton = document.querySelector('.header-cta');
+const consultationForm = document.querySelector('#consultation-form');
+const consultationName = document.querySelector('#consultation-name');
+const closeFormButton = document.querySelector('.form-close');
+
+consultationButton.addEventListener('click', () => {
+    consultationForm.hidden = !consultationForm.hidden;
+    consultationButton.setAttribute('aria-expanded', String(!consultationForm.hidden));
+
+    if (!consultationForm.hidden) {
+        consultationName.focus();
+    }
+});
+
+closeFormButton.addEventListener('click', () => {
+    consultationForm.hidden = true;
+    consultationButton.setAttribute('aria-expanded', 'false');
+    consultationButton.focus();
+});
+
+consultationForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const formData = new FormData(consultationForm);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = encodeURIComponent('Free 1-hour consultation request');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nI would like to book a free 1-hour consultation.`);
+
+    window.location.href = `mailto:aivis.solutions.info@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
 
 </body>
 </html>
